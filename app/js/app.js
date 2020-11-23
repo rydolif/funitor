@@ -27,6 +27,31 @@ document.addEventListener("DOMContentLoaded", function() {
 			// }
 		});
 
+	//----------------------SLIDER-info----------------------
+		var mySwiper = new Swiper('.info__slider', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			// loop: true,
+			// effect: 'fade',
+			autoplay: {
+				delay: 5000,
+			},
+			// pagination: {
+			// 	el: '.hero__slider_pagination',
+			// 	clickable: 'true',
+			// },
+			// navigation: {
+			// 	nextEl: '.hero__next',
+			// 	prevEl: '.hero__prev',
+			// },
+			// breakpoints: {
+			// 	320: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20
+			// 	},
+			// }
+		});
+
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
 			let list = document.querySelector(scrollTo);
@@ -143,9 +168,11 @@ document.addEventListener("DOMContentLoaded", function() {
 						});
 					}
 
-					close.addEventListener('click', () => {
-						item.classList.remove('active');
-					});
+					if (close) {
+						close.addEventListener('click', () => {
+							item.classList.remove('active');
+						});
+					}
 
 					item.addEventListener('click', (e) => {
 						if (e.target === item) {
@@ -158,26 +185,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		modals('.modal');
 		modals('.search');
+		modals('.cart');
 
 	//----------------------ACARDION-----------------------
-			if( window.innerWidth <= 992 ){
-				$(".block__content").slideUp("slow");
-				// $(".block").first().addClass('active');
-				$(".active .block__content").slideDown("slow");
-		
-				$(".block__header").on("click", function(){
-					if ($(this).parent().hasClass('active')) {
-						$(this).parent().removeClass('active');
-						$(".block__content").slideUp("slow");
-					}
-					else {
-						$(".active .block__content").slideUp("slow");
-						$(".header__nav_list .active").removeClass('active');
-						$(this).parent().addClass('active');
-						$(".active .block__content").slideDown("slow");
-					}
-				});
-			}
+		if( window.innerWidth <= 992 ){
+			$(".block__content").slideUp("slow");
+			// $(".block").first().addClass('active');
+			$(".active .block__content").slideDown("slow");
+	
+			$(".block__header").on("click", function(){
+				if ($(this).parent().hasClass('active')) {
+					$(this).parent().removeClass('active');
+					$(".block__content").slideUp("slow");
+				}
+				else {
+					$(".active .block__content").slideUp("slow");
+					$(".header__nav_list .active").removeClass('active');
+					$(this).parent().addClass('active');
+					$(".active .block__content").slideDown("slow");
+				}
+			});
+		}
 
 	//----------------------slider-----------------------
 		var stepsSlider = document.getElementById('steps-slider');
