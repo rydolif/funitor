@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Funitor</title>
+	<title>Funitor tovar</title>
 	<meta name="description" content="Startup HTML Optimized">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.ico">
@@ -160,23 +160,27 @@
 		</div>
 	</div>
 
-	<nav class="nav-catalog">
+	<nav class="nav-catalog" id="nav-catalog--open">
 		<div class="nav-catalog__wrap">
 
 			<div class="nav-catalog__wrap_header">
-				<p>ФИЛЬТРЫ</p>
-				<button class="nav-catalog__hamburger hamburger hamburger--active" type="button">
-					<span class="hamburger__item"></span>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 393 393.99"><path d="M368.313 0H17.05A16.5 16.5 0 0 0 2.344 8.96a16.732 16.732 0 0 0 1.3 17.415l128.688 181.281c.043.063.09.121.133.184a36.769 36.769 0 0 1 7.219 21.816v147.797a16.429 16.429 0 0 0 16.433 16.535c2.227 0 4.426-.445 6.48-1.297l72.313-27.574c6.48-1.976 10.781-8.09 10.781-15.453V229.656a36.774 36.774 0 0 1 7.215-21.816c.043-.063.09-.121.133-.184L381.723 26.367a16.717 16.717 0 0 0 1.3-17.406A16.502 16.502 0 0 0 368.313 0zM236.78 195.992a56.931 56.931 0 0 0-11.097 33.664v117.578l-66 25.164V229.656a56.909 56.909 0 0 0-11.102-33.664L23.648 20h338.07zm0 0"/></svg>
+					ФИЛЬТРЫ
+				</p>
+				<button class="close nav-catalog__close" type="button">
+					<span></span>
+					<span></span>
 				</button>
 			</div>
 			<div class="nav-catalog__wrap_main">
 
-				<div class="nav-catalog__wrap_block block">
-					<div class="nav-catalog__wrap_click block__header">
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
 						<p>Бренд</p>
 						<span></span>
 					</div>
-					<div class="nav-catalog__wrap_content block__content ">
+					<div class="nav-catalog__wrap_content filter__content ">
 						<p>
 							<input type="checkbox" id="remember1">
 							<label for="remember1" class="checkbox">Picooc 1</label>
@@ -200,12 +204,12 @@
 					</div>
 				</div>
 
-				<div class="nav-catalog__wrap_block block">
-					<div class="nav-catalog__wrap_click block__header">
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
 						<p>Цена</p>
 						<span></span>
 					</div>
-					<div class="nav-catalog__wrap_content block__content">
+					<div class="nav-catalog__wrap_content filter__content">
 						<div id="steps-slider"></div>
 						<div class="nav-catalog__wrap_input">
 							<input type="text" id="input-with-keypress-0">
@@ -216,12 +220,12 @@
 
 				</div>
 
-				<div class="nav-catalog__wrap_block block">
-					<div class="nav-catalog__wrap_click block__header">
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
 						<p>Выбор параметра</p>
 						<span></span>
 					</div>
-					<div class="nav-catalog__wrap_content block__content">
+					<div class="nav-catalog__wrap_content filter__content">
 						<p>
 							<input type="radio" id="radio1" name="radio" disabled>
 							<label for="radio1" class="radio">Picooc 1</label>
@@ -471,88 +475,261 @@
 
 	<main class="main">
 
-		<section class="hero">
+		<section class="tovar section">
 			<div class="container">
 
-				<div class="hero__slider swiper-container">
-					<div class="swiper-wrapper">
+				<div class="tovar__nav">
+					<ul class="tovar__nav_crumbs">
+						<li><a href="#">Главная</a></li>
+						<li><span>></span></li>
+						<li><a href="#">Все товары</a></li>
+						<li><span>></span></li>
+						<li><span>Название товара</span></li>
+					</ul>
+					<div class="tovar__nav_button">
+						<a href="#"><span>‹</span> Prev</a>
+						<a href="#">Next <span>›</span></a>
+					</div>
+				</div>
 
-						<div class="hero__slider_item swiper-slide">
-							<div class="hero__slider_desc">
-								<h1>Modern Digital <br>Table</h1>
-								<p>from $69</p>
-								<a href="#" class="btn">Show now</a>
-							</div>
-							<div class="hero__slider_img">
-								<img src="img/hero__slide1.png" alt="">
+				<div class="tovar__desc">
+					<div class="tovar__slider">
+						<div class="tovar__slider_min gallery-thumbs swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
 							</div>
 						</div>
-
-						<div class="hero__slider_item swiper-slide">
-							<div class="hero__slider_desc">
-								<h1>Modern Digital <br> Two Block</h1>
-								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit nisi quod inventore 
-									officia molestiae minima soluta, impedit perferendis in quis amet veniam temporibus 
-									eos odit dignissimos, ipsam dolores deleniti exercitationem?
+						<div class="tovar__slider_big gallery-top swiper-container">
+							<span class="sale">Sale</span>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/market__wrap_img1-2.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tovar__desc_content">
+						<h1>Ноутбук-трансформер Lenovo Ideapad C340-14IML (81TK00DERU) </h1>
+						<p>Омолаживающий BB-крем</p>
+						<hr>
+						<ul>
+							<li>Артикул: <span>FMHRTS-00236</span></li>
+							<li>Бренд: <a href="#">Sigma</a></li>
+							<li>Производство: <span>Италия</span></li>
+							<li>Объем, мл: <span>100</span></li>
+						</ul>
+						<hr>
+						<h3 class="tovar__desc_subtitle">Объем</h3>
+						<div class="tovar__desc_radio">
+							<p>
+								<input type="radio" id="volume1" name="radio">
+								<label for="volume1" class="radio">100 мл</label>
+							</p>
+							<p>
+								<input type="radio" id="volume2" name="radio">
+								<label for="volume2" class="radio">500 мл</label>
+							</p>
+							<p>
+								<input type="radio" id="volume3" name="radio">
+								<label for="volume3" class="radio">750 мл</label>
+							</p>
+						</div>
+						<div class="tovar__desc_button">
+							<div class="tovar__desc_button_price market__wrap_price">
+								<p class="market__wrap_price--old">
+									<del>50 000p</del>
+									<span class="market__wrap_price--minus">- 30 000</span>
 								</p>
-								<a href="#" class="btn">Show now</a>
+								70 000 р
 							</div>
-							<div class="hero__slider_img">
-								<img src="img/hero__slide1.png" alt="">
+							<div class="tovar__desc_button_cart">
+								<a href="#" class="btn btn--accent">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 393 393.99"><path d="M368.313 0H17.05A16.5 16.5 0 0 0 2.344 8.96a16.732 16.732 0 0 0 1.3 17.415l128.688 181.281c.043.063.09.121.133.184a36.769 36.769 0 0 1 7.219 21.816v147.797a16.429 16.429 0 0 0 16.433 16.535c2.227 0 4.426-.445 6.48-1.297l72.313-27.574c6.48-1.976 10.781-8.09 10.781-15.453V229.656a36.774 36.774 0 0 1 7.215-21.816c.043-.063.09-.121.133-.184L381.723 26.367a16.717 16.717 0 0 0 1.3-17.406A16.502 16.502 0 0 0 368.313 0zM236.78 195.992a56.931 56.931 0 0 0-11.097 33.664v117.578l-66 25.164V229.656a56.909 56.909 0 0 0-11.102-33.664L23.648 20h338.07zm0 0"/></svg>
+									В КОРЗИНУ
+								</a>
+							</div>
+							<div class="tovar__desc_button_add">
+								<a href="#" class="btn btn--white">КУПИТЬ В 1 КЛИК</a>
+							</div>
+							<a href="#" class="tovar__desc_button_like btn btn--like">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M474.644 74.27C449.391 45.616 414.358 29.836 376 29.836c-53.948 0-88.103 32.22-107.255 59.25-4.969 7.014-9.196 14.047-12.745 20.665-3.549-6.618-7.775-13.651-12.745-20.665-19.152-27.03-53.307-59.25-107.255-59.25-38.358 0-73.391 15.781-98.645 44.435C13.267 101.605 0 138.213 0 177.351c0 42.603 16.633 82.228 52.345 124.7 31.917 37.96 77.834 77.088 131.005 122.397 19.813 16.884 40.302 34.344 62.115 53.429l.655.574c2.828 2.476 6.354 3.713 9.88 3.713s7.052-1.238 9.88-3.713l.655-.574c21.813-19.085 42.302-36.544 62.118-53.431 53.168-45.306 99.085-84.434 131.002-122.395C495.367 259.578 512 219.954 512 177.351c0-39.138-13.267-75.746-37.356-103.081zM309.193 401.614c-17.08 14.554-34.658 29.533-53.193 45.646-18.534-16.111-36.113-31.091-53.196-45.648C98.745 312.939 30 254.358 30 177.351c0-31.83 10.605-61.394 29.862-83.245C79.34 72.007 106.379 59.836 136 59.836c41.129 0 67.716 25.338 82.776 46.594 13.509 19.064 20.558 38.282 22.962 45.659a15 15 0 0 0 28.524 0c2.404-7.377 9.453-26.595 22.962-45.66 15.06-21.255 41.647-46.593 82.776-46.593 29.621 0 56.66 12.171 76.137 34.27C471.395 115.957 482 145.521 482 177.351c0 77.007-68.745 135.588-172.807 224.263z"/></svg>
+							</a>
+						</div>
+						<hr>
+						<div class="tovar__tabs">
+							<ul class="tovar__tabs_list">
+								<li class="tovar__tabs_item">ОПИСАНИЕ</li>
+								<li class="tovar__tabs_item">Характеристики</li>
+								<li class="tovar__tabs_item">отзывы</li>
+							</ul>
+
+							<div class="tovar__tabs_wrap">
+								<p>Назначение</p>
+								<p>Омоложение</p>
+								<br>
+								<p>
+									BB-крем для лица Silver Label омолаживающий с SPF 35/PA++ защищает кожу от 
+									воздействия солнечного излучения и выравнивает тон кожи. Натуральный защитный 
+									комплекс в составе формулы, состоящий из 5 растительных экстрактов заботится о 
+									Вашей коже, делает кожу гладкой, маскирует несовершенства и выравнивает тон кожи.
+								</p>
+								<br>
+								<p>Способ применения:</p>
+								<p>наносить на очищенную кожу лица.</p>
+							</div>
+							<div class="tovar__tabs_wrap">
+								<p>Назначение</p>
+								<p>Омоложение</p>
+								<br>
+								<p>
+									BB-крем для лица Silver Label омолаживающий с SPF 35/PA++ защищает кожу от 
+									воздействия солнечного излучения и выравнивает тон кожи. Натуральный защитный 
+									комплекс в составе формулы, состоящий из 5 растительных экстрактов заботится о 
+									Вашей коже, делает кожу гладкой, маскирует несовершенства и выравнивает тон кожи.
+								</p>
+							</div>
+							<div class="tovar__tabs_wrap">
+								<p>
+									BB-крем для лица Silver Label омолаживающий с SPF 35/PA++ защищает кожу от 
+									воздействия солнечного излучения и выравнивает тон кожи. Натуральный защитный 
+									комплекс в составе формулы, состоящий из 5 растительных экстрактов заботится о 
+									Вашей коже, делает кожу гладкой, маскирует несовершенства и выравнивает тон кожи.
+								</p>
+								<br>
+								<p>Способ применения:</p>
+								<p>наносить на очищенную кожу лица.</p>
 							</div>
 						</div>
-
-					</div>
-					<div class="hero__slider_pagination"></div>
-				</div>
-	
-			</div>
-		</section>
-	
-		<section class="info">
-			<div class="info__slider container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide info__item">
-						<div class="info__item_number">1</div>
-						<h3>Fast shiping</h3>
-						<p>48h dispatch on most items</p>
-					</div>
-
-					<div class="swiper-slide info__item">
-						<div class="info__item_number">2</div>
-						<h3>Hunge pange</h3>
-						<p>48h dispatch on most items</p>
-					</div>
-
-					<div class="swiper-slide info__item">
-						<div class="info__item_number">3</div>
-						<h3>Euro no.1 furtiture</h3>
-						<p>48h dispatch on most items</p>
-					</div>
-
-					<div class="swiper-slide info__item">
-						<div class="info__item_number">4</div>
-						<h3>Fast shiping</h3>
-						<p>48h dispatch on most items</p>
 					</div>
 				</div>
+
 			</div>
 		</section>
-	
-		<section class="market tabs section">
+
+		<section class="tovar__more section">
 			<div class="container">
-
-				<ul class="market__list tabs__list">
-					<li class="market__list_item tabs__item">New</li>
-					<li class="market__list_item tabs__item">Hot</li>
-					<li class="market__list_item tabs__item">Sale</li>
-				</ul>
-				
-				<div class="tabs__wrap">
-					<div class="market__wrap">
-
-						<div class="market__wrap_item">
+				<h2>Просмотреные товары</h2>
+				<div class="tovar__container tovar__container1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
 							<div class="market__wrap_block">
 	
 								<div class="market__wrap_hover">
@@ -640,873 +817,7 @@
 	
 							</div>
 						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="sale">Sale</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="sale">Sale</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный </a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-					</div>
-				</div>
-
-				<div class="tabs__wrap">
-					<div class="market__wrap">
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="sale">Sale</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
+						<div class="swiper-slide market__wrap_item">
 							<div class="market__wrap_block">
 	
 								<div class="market__wrap_hover">
@@ -1594,442 +905,7 @@
 	
 							</div>
 						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="sale">Sale</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный </a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="tabs__wrap">
-					<div class="market__wrap">
-					
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
+						<div class="swiper-slide market__wrap_item">
 							<div class="market__wrap_block">
 	
 								<div class="market__wrap_hover">
@@ -2117,8 +993,7 @@
 	
 							</div>
 						</div>
-	
-						<div class="market__wrap_item">
+						<div class="swiper-slide market__wrap_item">
 							<div class="market__wrap_block">
 	
 								<div class="market__wrap_hover">
@@ -2197,187 +1072,16 @@
 									<p class="market__wrap_title">
 										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
 									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
 									</div>
 								</div>
 	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
 							</div>
 						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">
-											Стол письменный с четырмя ножками и подпорками (в подарок)
-										</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
+						<div class="swiper-slide market__wrap_item">
 							<div class="market__wrap_block">
 	
 								<div class="market__wrap_hover">
@@ -2454,214 +1158,559 @@
 								<div class="market__wrap_product">
 									<p class="market__wrap_brend">Бренд Lux</p>
 									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
 									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="hot">Hot</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
 									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный </a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
-								</div>
-	
-							</div>
-						</div>
-	
-						<div class="market__wrap_item">
-							<div class="market__wrap_block">
-	
-								<div class="market__wrap_hover">
-									<a href="#" class="market__wrap_img">
-										<span class="new">New</span>
-										<img src="img/market__wrap_img1.jpg" alt="">
-										<img src="img/market__wrap_img1-2.jpg" alt="">
-									</a>
-									<div class="market__wrap_button">
-										<div class="market__wrap_wishlist">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
-																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
-																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
-																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
-																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
-																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
-																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
-																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
-																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
-																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
-																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
-																C482,254.358,413.255,312.939,309.193,401.614z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<div class="market__wrap_add-cart">
-											<form method="post">
-												<input type="hidden" name="id">
-												<button type="submit" name="add">
-													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
-														<g>
-															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
-																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
-																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
-																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
-																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
-														</g>
-													</svg>
-												</button>
-											</form>
-										</div>
-										<div class="market__wrap_search">
-											<a href="#">
-												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-													<g>
-														<g>
-															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
-																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
-																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
-														</g>
-													</g>
-													<g>
-														<g>
-															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
-																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
-																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
-														</g>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-	
-								<div class="market__wrap_product">
-									<p class="market__wrap_brend">Бренд Lux</p>
-									<p class="market__wrap_title">
-										<a href="#">Стол письменный</a>
-									</p>
-									<div class="market__wrap_price"><span>от</span> 70 000 р</div>
 								</div>
 	
 							</div>
 						</div>
 					</div>
+					<div class="tovar__pagination tovar__container1_pagination"></div>
 				</div>
-
-				<div class="market__more"><a href="#">ПОКАЗАТЬ ЕЩЕ</a></div>
-
 			</div>
 		</section>
+
+		<section class="tovar__more section">
+			<div class="container">
+				<h2>Просмотреные товары</h2>
+				<div class="tovar__container tovar__container2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
 	
-		<section class="show section">
-			<div class="show__container container">
-
-				<div class="show__item">
-					<a href="#">
-						<img src="img/show__item1.webp" alt="">
-					</a>
-					<div class="show__item_desc">
-						<h3>Last-minute <br>college</h3>
-						<a href="#">Shop now</a>
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<div class="swiper-slide market__wrap_item">
+							<div class="market__wrap_block">
+	
+								<div class="market__wrap_hover">
+									<a href="#" class="market__wrap_img">
+										<span class="sale">Sale</span>
+										<img src="img/market__wrap_img1.jpg" alt="">
+										<img src="img/market__wrap_img1-2.jpg" alt="">
+									</a>
+									<div class="market__wrap_button">
+										<div class="market__wrap_wishlist">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M474.644,74.27C449.391,45.616,414.358,29.836,376,29.836c-53.948,0-88.103,32.22-107.255,59.25
+																c-4.969,7.014-9.196,14.047-12.745,20.665c-3.549-6.618-7.775-13.651-12.745-20.665c-19.152-27.03-53.307-59.25-107.255-59.25
+																c-38.358,0-73.391,15.781-98.645,44.435C13.267,101.605,0,138.213,0,177.351c0,42.603,16.633,82.228,52.345,124.7
+																c31.917,37.96,77.834,77.088,131.005,122.397c19.813,16.884,40.302,34.344,62.115,53.429l0.655,0.574
+																c2.828,2.476,6.354,3.713,9.88,3.713s7.052-1.238,9.88-3.713l0.655-0.574c21.813-19.085,42.302-36.544,62.118-53.431
+																c53.168-45.306,99.085-84.434,131.002-122.395C495.367,259.578,512,219.954,512,177.351
+																C512,138.213,498.733,101.605,474.644,74.27z M309.193,401.614c-17.08,14.554-34.658,29.533-53.193,45.646
+																c-18.534-16.111-36.113-31.091-53.196-45.648C98.745,312.939,30,254.358,30,177.351c0-31.83,10.605-61.394,29.862-83.245
+																C79.34,72.007,106.379,59.836,136,59.836c41.129,0,67.716,25.338,82.776,46.594c13.509,19.064,20.558,38.282,22.962,45.659
+																c2.011,6.175,7.768,10.354,14.262,10.354c6.494,0,12.251-4.179,14.262-10.354c2.404-7.377,9.453-26.595,22.962-45.66
+																c15.06-21.255,41.647-46.593,82.776-46.593c29.621,0,56.66,12.171,76.137,34.27C471.395,115.957,482,145.521,482,177.351
+																C482,254.358,413.255,312.939,309.193,401.614z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+										<div class="market__wrap_add-cart">
+											<form method="post">
+												<input type="hidden" name="id">
+												<button type="submit" name="add">
+													<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
+														<g>
+															<path d="M440.1,422.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6C340.3,42.5,297.3,0,244.5,0s-95.8,42.5-96.6,95.1H90.3
+																c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+																C440.2,423.5,440.2,423.1,440.1,422.7z M244.5,27c37.9,0,68.8,30.4,69.6,68.1H174.9C175.7,57.4,206.6,27,244.5,27z M366.8,462
+																H122.2c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+																c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
+														</g>
+													</svg>
+												</button>
+											</form>
+										</div>
+										<div class="market__wrap_search">
+											<a href="#">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+													<g>
+														<g>
+															<path d="M225.773,0.616C101.283,0.616,0,101.622,0,225.773s101.284,225.157,225.773,225.157s225.774-101.006,225.774-225.157
+																S350.263,0.616,225.773,0.616z M225.773,413.917c-104.084,0-188.761-84.406-188.761-188.145
+																c0-103.745,84.677-188.145,188.761-188.145s188.761,84.4,188.761,188.145C414.535,329.511,329.858,413.917,225.773,413.917z"/>
+														</g>
+													</g>
+													<g>
+														<g>
+															<path d="M506.547,479.756L385.024,358.85c-7.248-7.205-18.963-7.174-26.174,0.068c-7.205,7.248-7.174,18.962,0.068,26.174
+																l121.523,120.906c3.615,3.59,8.328,5.385,13.053,5.385c4.756,0,9.506-1.82,13.121-5.453
+																C513.82,498.681,513.789,486.967,506.547,479.756z"/>
+														</g>
+													</g>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+	
+								<div class="market__wrap_product">
+									<p class="market__wrap_brend">Бренд Lux</p>
+									<p class="market__wrap_title">
+										<a href="#">Стол письменный с четырмя ножками и подпорками (в подарок)</a>
+									</p>
+									<div class="market__wrap_price">
+										<p class="market__wrap_price--old"><del>50 000p</del></p>
+										<span>от</span> 70 000 р <span class="market__wrap_price--minus">- 30 000</span>
+										
+									</div>
+								</div>
+	
+							</div>
+						</div>
 					</div>
+					<div class="tovar__pagination tovar__container2_pagination"></div>
 				</div>
-
-				<div class="show__item">
-					<a href="#">
-						<img src="img/show__item2.webp" alt="">
-					</a>
-					<div class="show__item_desc">
-						<h3>Lingnting <br>Collection Sale </h3>
-						<a href="#">Shop now</a>
-					</div>
-				</div>
-
 			</div>
 		</section>
 

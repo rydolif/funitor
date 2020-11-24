@@ -40,6 +40,8 @@
 	letter-spacing: .2em
 	padding: 0 40px
 	border: 0
+	white-space: nowrap
+	cursor: pointer
 
 	+r(1200)
 		min-height: 40px
@@ -50,6 +52,57 @@
 
 	&:active
 		top: 3px
+
+	&--accent, &--white
+		border-radius: 25px
+		letter-spacing: .5px
+		padding: 0 25px
+		min-height: 45px
+		font-weight: 500
+
+	&--accent
+		color: #ffffff
+		background-color: $accent
+
+		&:hover
+			box-shadow: 0 0 10px 0 rgba($accent, 1)
+
+		svg
+			fill: #ffffff
+			width: 15px
+			margin-right: 10px
+
+	&--white
+		background-color: #fff
+		color: $text
+		border: 1px solid #acacac
+
+		&:hover,
+		&:active
+			background-color: $accent
+			border: 1px solid $accent
+
+	&--like
+		min-width: 45px
+		min-height: 45px
+		max-width: 100%
+		border-radius: 50%
+		padding: 0
+		background-color: #fff
+		color: $text
+		border: 1px solid #acacac
+
+		&:hover,
+		&:active
+			background-color: $accent
+			border: 1px solid $accent
+
+			svg
+				fill: #fff
+
+		svg
+			fill: #acacac
+			width: 18px
 
 // -----HAMBURGER-----
 .hamburger
@@ -630,6 +683,33 @@
 			margin-right: 0
 
 
+// -----MARKER-----
+.sale, .new, .hot
+	position: absolute
+	right: 15px
+	top: 15px
+	color: #ffffff
+	display: block
+	padding: 3px 10px
+	z-index: 10
+
+	+r(576)
+		top: 5px
+		right: 5px
+		padding: 2px 5px
+		font-size: 12px
+
+.sale
+	background-color: #28a745
+
+.new
+	background-color: #ff4949
+
+.hot
+	background-color: #ddac55
+
+
+// -----BODY-----
 .header
 	position: fixed
 	top: 0
@@ -662,13 +742,14 @@
 		+r(992)
 			position: fixed
 			top: 0
-			left: -100vw
+			left: 0
 			width: 100vw
 			height: 100%
 			+transition
 			background-color: rgba($text, .3)
 			opacity: 0
 			z-index: 1100
+			visibility: hidden
 
 		&_wrap
 
@@ -996,8 +1077,8 @@
 						background-color: #ffffff
 
 		&--active
-			left: 0
 			opacity: 1
+			visibility: visible
 
 			.header__nav_wrap
 				margin-left: 0
@@ -1534,14 +1615,6 @@
 					padding: 2px 5px
 					font-size: 12px
 
-			.sale
-				background-color: #28a745
-
-			.new
-				background-color: #ff4949
-
-			.hot
-				background-color: #ddac55
 
 		&_brend
 			color: #979797
@@ -2122,6 +2195,327 @@
 				border-color: $accent
 
 
+.tovar
+
+	&__nav
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 35px
+
+		+r(1200)
+			margin-bottom: 20px
+
+		+r(480)
+			justify-content: start
+
+		&_crumbs
+			display: flex
+			margin-bottom: 5px
+
+			+r(480)
+				width: 100%
+				justify-content: center
+
+			li
+				margin-right: 5px
+
+			span
+				color: #979797
+		
+		&_button
+			display: flex
+			text-transform: uppercase
+			align-items: center
+			font-weight: 700
+
+			+r(480)
+				width: 100%
+				justify-content: center
+
+			&::before
+				content: ''
+				display: block
+				width: 2px
+				height: 14px
+				background-color: #eaeaea
+				order: 1
+				margin: 0 10px
+
+			a
+				font-size: 12px
+
+				&:last-child
+					order: 2
+
+			span
+				font-size: 18px
+				line-height: 1
+				margin: 0 10px
+
+	&__desc
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		h1
+			font-size: 40px
+			margin-bottom: 25px
+			font-weight: 400
+
+			+r(1440)
+				font-size: 36px
+				margin-bottom: 15px
+			
+			+r(1200)
+				font-size: 30px
+			
+			+r(992)
+				font-size: 24px
+
+		p, ul
+			color: #979797
+			margin-bottom: 5px
+			letter-spacing: .05em
+		
+		hr
+			margin-bottom: 20px
+
+			+r(1200)
+				margin-bottom: 10px
+
+		li
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+			span
+				color: $text
+				font-weight: 500
+
+			a
+				color: $accent
+				text-decoration: underline
+
+		&_content
+			width: 50%
+
+			+r(767)
+				width: 100%
+
+		&_subtitle
+			font-size: 18px
+			font-weight: 500
+			margin-bottom: 20px
+
+		&_radio
+			display: flex
+			margin-bottom: 45px
+
+			+r(1200)
+				margin-bottom: 30px
+
+			+r(992)
+				margin-bottom: 20px
+
+			p
+				margin-right: 10px
+				margin-bottom: 5px
+
+				&:last-child
+					margin-right: 0
+
+			.radio
+				position: relative
+				color: $text
+				cursor: pointer
+				margin-bottom: 0
+				margin-right: 0
+				padding: 4px 8px
+				border: 1px solid $text
+				font-weight: 500
+				+transition
+
+			input[type="radio"]:checked + label
+				color: $accent
+				border-color: $accent
+
+			input[type="radio"]
+				display: none
+
+		&_button
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			margin-bottom: 35px
+
+			&_price, &_cart, &_add, &_like
+				margin-right: 35px
+
+				+r(1440)
+					margin-right: 15px
+					margin-bottom: 10px
+
+			&_price
+				font-size: 26px
+
+				.market__wrap_price--minus
+					color: $accent
+					padding: 2px
+					font-size: 12px
+
+				del
+					font-size: 14px
+				
+				p
+					margin-bottom: 0
+
+	&__tabs
+
+		&_list
+			display: flex
+			text-transform: uppercase
+			margin-bottom: 25px !important
+
+			+r(1200)
+				margin-bottom: 15px
+
+			li
+				cursor: pointer
+				margin-right: 25px
+				margin-bottom: 0
+				font-weight: 500
+				color: $text
+				border-bottom: 3px solid transparent
+				+transition
+
+				+r(1200)
+					margin-right: 15px
+
+				&:last-child
+					margin-right: 0
+
+			.active
+				border-bottom: 3px solid $accent
+
+		&_item
+		
+		&_wrap
+			flex-direction: column
+
+			p, ul
+				color: $text
+
+	&__slider
+		display: flex
+		width: 40%
+
+		+r(1440)
+			width: 47%
+
+		+r(767)
+			width: 100%
+			margin-bottom: 25px
+
+		&_min
+			width: 75px
+			max-height: 460px
+
+			+r(1440)
+				max-height: 450px
+
+			+r(1200)
+				max-height: 350px
+
+			+r(992)
+				max-height: 280px
+				width: 50px
+
+			+r(767)
+				max-height: 480px
+
+			+r(576)
+				max-height: 385px
+			
+			+r(480)
+				max-height: 300px
+
+			.swiper-slide
+				cursor: pointer
+				width: 75px
+				height: 75px !important
+				border: 1px solid transparent
+				+transition
+
+				+r(992)
+					width: 50px
+					height: 50px !important
+
+				img
+					width: 100%
+
+				&-thumb-active
+					border: 1px solid $accent
+
+		&_big
+			width: calc(100% - 100px)
+
+			+r(992)
+				width: calc(100% - 65px)
+
+			img
+				width: 100%
+
+	&__more
+
+		h2
+			display: inline-block
+			padding-bottom: 4px
+			position: relative
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 45px
+			text-transform: uppercase
+			letter-spacing: 0.1em
+
+			+r(1200)
+				margin-bottom: 25px
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 2px
+				background-color: $accent
+
+	&__container
+		overflow: hidden
+
+	&__pagination
+		display: flex
+		justify-content: center
+		padding-top: 50px
+
+		+r(992)
+			padding-top: 30px
+
+		+r(767)
+			padding-top: 20px
+
+		span
+			display: block
+			margin: 0 5px
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: #c4c4c4
+
+		.swiper-pagination-bullet-active
+			background-color: $text
+
+
 .footer
 	background-color: #333333
 	color: #6e6e6e
@@ -2590,130 +2984,132 @@
 			border-right: 4px solid transparent
 			border-top: 4px solid transparent
 
-// -----CHECKBOX-----
-.checkbox
-	position: relative
-	padding-left: 30px
-	color: $text
-	cursor: pointer
-	margin-bottom: 0
-	margin-right: 0
 
-	&::before,
-	&::after
-		content: ''
-		position: absolute
-		left: 0
-		+transition
+.nav-catalog__wrap
+	// -----CHECKBOX-----
+	.checkbox
+		position: relative
+		padding-left: 30px
+		color: $text
+		cursor: pointer
+		margin-bottom: 0
+		margin-right: 0
 
-	&::before
-		top: 1px
-		width: 15px
-		height: 15px
-		border-radius: 3px
-		border: 1px solid #b7b7b7
-		background-color: #fff
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			+transition
 
-	&::after
-		top: 2px
-		left: 5px
-		width: 5px
-		height: 10px
-		border-top: 2px solid #fff
-		border-left: 2px solid #fff
-		transform: rotate(-135deg)
+		&::before
+			top: 1px
+			width: 15px
+			height: 15px
+			border-radius: 3px
+			border: 1px solid #b7b7b7
+			background-color: #fff
 
-input[type="checkbox"]
-	display: none
+		&::after
+			top: 2px
+			left: 5px
+			width: 5px
+			height: 10px
+			border-top: 2px solid #fff
+			border-left: 2px solid #fff
+			transform: rotate(-135deg)
 
-input[type="checkbox"]:checked + label::after
-	transform: rotate(-135deg) scale(1)
+	input[type="checkbox"]
+		display: none
 
-input[type="checkbox"] + label::after
-	transform: scale(0)
+	input[type="checkbox"]:checked + label::after
+		transform: rotate(-135deg) scale(1)
 
-input[type="checkbox"]:checked + label::before
-	background-color: $accent
-	border: 1px solid $accent
+	input[type="checkbox"] + label::after
+		transform: scale(0)
 
-input[type="checkbox"]:disabled + label
-	color: #979797
+	input[type="checkbox"]:checked + label::before
+		background-color: $accent
+		border: 1px solid $accent
+
+	input[type="checkbox"]:disabled + label
+		color: #979797
 
 
-// -----RADIO-----
-.radio
-	position: relative
-	padding-left: 30px
-	color: $text
-	cursor: pointer
-	margin-bottom: 0
-	margin-right: 0
+	// -----RADIO-----
+	.radio
+		position: relative
+		padding-left: 30px
+		color: $text
+		cursor: pointer
+		margin-bottom: 0
+		margin-right: 0
 
-	&::before,
-	&::after
-		content: ''
-		position: absolute
-		left: 0
-		+transition
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			+transition
 
-	&::before
-		top: 1px
-		width: 20px
-		height: 20px
-		border-radius: 50%
-		border: 1px solid #b7b7b7
-		background-color: #fff
+		&::before
+			top: 1px
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			border: 1px solid #b7b7b7
+			background-color: #fff
 
-	&::after
-		top: 5px
-		left: 4px
-		width: 12px
-		height: 12px
-		transform: rotate(-135deg)
-		border-radius: 50%
+		&::after
+			top: 5px
+			left: 4px
+			width: 12px
+			height: 12px
+			transform: rotate(-135deg)
+			border-radius: 50%
+			background-color: $accent
+
+	input[type="radio"]:disabled + label
+		color: #979797
+
+	input[type="radio"]
+		display: none
+
+	input[type="radio"]:checked + label::after
+		transform:  scale(1)
+
+	input[type="radio"] + label::after
+		transform: scale(0)
+
+	input[type="radio"]:checked + label::before
+		border: 1px solid $accent
+
+
+	// -----SLIDER-FILTER----
+	.noUi-target
+		height: 2px
+		border-radius: 0
+		background-color: #babac0
+		border: 0
+		box-shadow: 0 0 0 0 #000
+		margin-bottom: 15px
+
+	.noUi-connect
 		background-color: $accent
 
-input[type="radio"]:disabled + label
-	color: #979797
-
-input[type="radio"]
-	display: none
-
-input[type="radio"]:checked + label::after
-	transform:  scale(1)
-
-input[type="radio"] + label::after
-	transform: scale(0)
-
-input[type="radio"]:checked + label::before
-	border: 1px solid $accent
-
-
-// -----SLIDER-FILTER----
-.noUi-target
-	height: 2px
-	border-radius: 0
-	background-color: #babac0
-	border: 0
-	box-shadow: 0 0 0 0 #000
-	margin-bottom: 15px
-
-.noUi-connect
-	background-color: $accent
-
-.noUi-horizontal .noUi-handle
-	padding: 0
-	border-radius: 50%
-	width: 20px
-	height: 20px
-	top: -8px
-	outline: none
-	border-color: $accent
-	cursor: pointer
-	
-	&::before,
-	&::after
-		display: none
+	.noUi-horizontal .noUi-handle
+		padding: 0
+		border-radius: 50%
+		width: 20px
+		height: 20px
+		top: -8px
+		outline: none
+		border-color: $accent
+		cursor: pointer
+		
+		&::before,
+		&::after
+			display: none
 
 
 

@@ -52,6 +52,80 @@ document.addEventListener("DOMContentLoaded", function() {
 			// }
 		});
 
+	//----------------------SLIDER-tovar1----------------------
+		var mySwiper = new Swiper('.tovar__container1', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.tovar__container1_pagination',
+				clickable: 'true',
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 15
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				},
+			}
+		});
+
+	//----------------------SLIDER-tovar2----------------------
+		var mySwiper = new Swiper('.tovar__container2', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.tovar__container2_pagination',
+				clickable: 'true',
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 15
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				},
+			}
+		});
+
+	//----------------------SLIDER-hero----------------------
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+			spaceBetween: 10,
+			slidesPerView: 5,
+			freeMode: true,
+			loopedSlides: 5,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			direction: 'vertical',
+			breakpoints: {
+				1600: {
+					slidesPerView: 4,
+					spaceBetween: 10
+				},
+				1240: {
+					slidesPerView: 3,
+					spaceBetween: 10
+				}
+			},
+		});
+		var galleryTop = new Swiper('.gallery-top', {
+			spaceBetween: 40,
+			loopedSlides: 5,
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+		});
+
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
 			let list = document.querySelector(scrollTo);
@@ -132,7 +206,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		hamburger('.header__hamburger', '.header__nav', '.header');
 		hamburger('.header__nav_close', '.header__nav', '.header');
-
 
 	//----------------------MODAL-----------------------
 		const modals = (modalSelector) => {
@@ -274,27 +347,34 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		tabs('.tabs', '.tabs__item', '.tabs__wrap', 'active');
 		tabs('.header__nav_wrap', '.header__nav_tabs--item', '.header__nav_elem', 'active');
+		tabs('.tovar__tabs', '.tovar__tabs_item', '.tovar__tabs_wrap', 'active');
 
 
 	//----------------------TABLE-----------------------
-		const tableWrap = document.querySelector('.market__wrap');
-		const tableList = document.querySelector('.market__filter_list');
-		const tableTable = document.querySelector('.market__filter_table');
+		const table = (tableWrapInfo, tableListInfo, tableTableInfo) => {
+			const tableWrap = document.querySelector(tableWrapInfo);
+			const tableList = document.querySelector(tableListInfo);
+			const tableTable = document.querySelector(tableTableInfo);
 
-		tableList.addEventListener('click', (e) => {
-			e.preventDefault();
-			tableWrap.classList.add('market__wrap--min');
-			tableList.classList.add('open');
-			tableTable.classList.remove('open');
-		});
+			if (tableWrap && tableList && tableTable) {
+				tableList.addEventListener('click', (e) => {
+					e.preventDefault();
+					tableWrap.classList.add('market__wrap--min');
+					tableList.classList.add('open');
+					tableTable.classList.remove('open');
+				});
+	
+				tableTable.addEventListener('click', (e) => {
+					e.preventDefault();
+					tableWrap.classList.remove('market__wrap--min');
+					tableTable.classList.add('open');
+					tableList.classList.remove('open');
+				});
+			}
 
-		tableTable.addEventListener('click', (e) => {
-			e.preventDefault();
-			tableWrap.classList.remove('market__wrap--min');
-			tableTable.classList.add('open');
-			tableList.classList.remove('open');
-		});
 
+		};
+		table('.market__wrap', '.market__filter_list', '.market__filter_table');
 
 });
 	
