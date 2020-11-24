@@ -41,7 +41,7 @@
 	padding: 0 40px
 	border: 0
 
-	+r(992)
+	+r(1200)
 		min-height: 40px
 
 	&:hover
@@ -333,6 +333,8 @@
 
 			&:last-child
 				border-bottom: 0
+				margin-bottom: 0
+				padding-bottom: 0
 
 		&_click
 			position: relative
@@ -371,6 +373,10 @@
 				padding: 0 15px
 				border-color: #babac0
 
+				+r(992)
+					padding: 0 5px
+					text-align: center
+
 			b
 				display: flex
 				height: 2px
@@ -382,6 +388,19 @@
 			span
 				transform: translate(0, -50%) rotate(45deg)
 				border-color: $accent
+
+		&_category
+
+			a
+				font-size: 18px
+
+			span
+				font-size: 12px !important
+				color: #979797 !important
+				padding-left: 5px
+
+			img
+				margin-right: 15px
 
 	&.active
 		left: 0
@@ -1391,16 +1410,26 @@
 				grid-template-columns: 1fr 1fr
 				grid-gap: 15px 7.5px
 
-			.market__wrap_img span
-				top: 5px
-				right: 5px
-				font-size: 12px
-				padding: 2px 6px
+			.market__wrap
+				&_hover
+					margin-bottom: 5px
 
-			.market__wrap_button a,
-			.market__wrap_button button
-				width: 35px
-				height: 35px
+				&_brend
+					margin-bottom: 5px
+
+				&_img span
+					top: 5px
+					right: 5px
+					font-size: 12px
+					padding: 2px 6px
+
+				&_button a,
+				&_button button
+					width: 35px
+					height: 35px
+
+				&_title
+					margin-bottom: 5px
 
 		&_item
 			position: relative
@@ -1555,7 +1584,20 @@
 				+r(992)
 					padding: 1px 2px
 					margin-left: 5px
-	
+
+		&_color
+			display: flex
+			flex-wrap: wrap
+			padding-top: 5px
+
+			span
+				display: block
+				width: 13px
+				height: 13px
+				border-radius: 50%
+				margin-right: 3px
+				background-color: #000000
+
 	&__more
 		display: flex
 		justify-content: center
@@ -1662,6 +1704,178 @@
 			+r(992)
 				margin-left: 15px
 
+		&_col
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 24%
+
+			+r(992)
+				margin-bottom: 10px
+				width: 100%
+				justify-content: center
+
+			p
+				display: flex
+				margin-right: 15px
+
+			a
+				color: #979797
+				text-decoration: underline
+
+				&:hover
+					color: $accent
+
+			svg
+				width: 15px
+				height: 15px
+
+	&__pagination
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		padding-top: 40px
+		grid-column-start: 2
+
+		a, span
+			display: flex
+			justify-content: center
+			align-items: center
+			min-width: 35px
+			min-height: 35px
+			border: 1px solid transparent
+			border-radius: 3px
+			margin-right: 3px
+			padding: 3px
+			line-height: 1
+
+			+r(992)
+				min-width: 25px
+				min-height: 25px
+
+		a
+			&:hover,
+			&:focus
+				color: $text
+			
+			&:hover
+				border: 1px solid $bg
+				background-color: $bg
+
+		span
+			border: 1px solid $text
+
+		&_arrow
+			font-size: 20px
+
+	&__catalog
+		display: grid
+		grid-template-columns: 1fr 3fr
+		grid-gap: 30px
+		font-size: 18px
+		height: auto
+
+		+r(1200)
+			grid-gap: 15px
+			font-size: 16px
+
+		+r(767)
+			grid-template-columns: 1fr
+			font-size: 14px
+
+		&_filter
+			margin: 0
+
+		.market__wrap
+			grid-template-columns: 1fr 1fr 1fr
+
+			+r(992)
+				grid-template-columns: 1fr 1fr
+
+			+r(576)
+				grid-template-columns: 1fr
+
+			&--min
+				grid-template-columns: 1fr 1fr 1fr 1fr
+
+				+r(992)
+					grid-template-columns: 1fr 1fr 1fr
+
+				+r(576)
+					grid-template-columns: 1fr 1fr
+
+		.nav-catalog
+			&__wrap
+				max-width: 100%
+
+			&__wrap_main
+
+			+r(1200)
+				padding: 15px
+
+		.nav-catalog__wrap_main
+			background-color: $bg
+			
+			+r(1200)
+				padding: 15px
+				font-size: 16px
+
+		.nav-catalog__wrap
+			background-color: #fff
+
+	&__bunner
+		position: relative
+		display: block
+		margin-top: 50px
+
+		+r(1200)
+			margin-top: 30px
+
+		+r(767)
+			margin-top: 15px
+
+		&:hover
+			.btn
+				transform: scale(1.1)
+
+		img
+			width: 100%
+
+		div
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 95%
+			max-height: 95%
+			z-index: 1
+			text-align: center
+
+		h3
+			font-size: 36px
+			font-weight: 500
+			color: #ffffff
+			line-height: 1
+			margin-bottom: 20px
+
+			+r(1200)
+				font-size: 30px
+
+		p
+			color: #ffffff
+			font-size: 20px
+			margin-bottom: 5px
+			text-transform: uppercase
+
+			+r(1200)
+				font-size: 16px
+
+		.btn
+			background-color: $accent
+			color: #ffffff
+			margin: 0 auto
+			+transition
+
 
 .catalog
 
@@ -1694,6 +1908,12 @@
 
 		span
 			margin: 0 5px
+
+		&--white
+			background-color: #fff
+
+			ul
+				margin-bottom: 0
 
 	&__category
 		display: flex
