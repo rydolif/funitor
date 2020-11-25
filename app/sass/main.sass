@@ -464,6 +464,7 @@ section, nav, header, footer, main
 
 		&_main
 			padding: 30px
+			min-height: calc(100% - 100px)
 
 		&_block
 			padding-bottom: 20px
@@ -737,7 +738,7 @@ section, nav, header, footer, main
 		@extend .header__nav_tabs
 		display: flex !important
 
-		a
+		a, button
 			display: flex
 			justify-content: center
 			align-items: center
@@ -757,6 +758,7 @@ section, nav, header, footer, main
 
 			&:hover
 				background-color: $accent
+				color: #fff
 
 	&.active
 		top: 0
@@ -2009,6 +2011,7 @@ section, nav, header, footer, main
 
 			&_main
 				background-color: $bg
+				min-height: auto
 				
 				+r(1200)
 					padding: 15px
