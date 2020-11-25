@@ -160,6 +160,92 @@
 		</div>
 	</div>
 
+	<nav class="nav-catalog" id="nav-catalog--open">
+		<div class="nav-catalog__wrap">
+
+			<div class="nav-catalog__wrap_header">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 393 393.99"><path d="M368.313 0H17.05A16.5 16.5 0 0 0 2.344 8.96a16.732 16.732 0 0 0 1.3 17.415l128.688 181.281c.043.063.09.121.133.184a36.769 36.769 0 0 1 7.219 21.816v147.797a16.429 16.429 0 0 0 16.433 16.535c2.227 0 4.426-.445 6.48-1.297l72.313-27.574c6.48-1.976 10.781-8.09 10.781-15.453V229.656a36.774 36.774 0 0 1 7.215-21.816c.043-.063.09-.121.133-.184L381.723 26.367a16.717 16.717 0 0 0 1.3-17.406A16.502 16.502 0 0 0 368.313 0zM236.78 195.992a56.931 56.931 0 0 0-11.097 33.664v117.578l-66 25.164V229.656a56.909 56.909 0 0 0-11.102-33.664L23.648 20h338.07zm0 0"/></svg>
+					ФИЛЬТРЫ
+				</p>
+				<button class="close nav-catalog__close" type="button">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="nav-catalog__wrap_main">
+
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
+						<p>Бренд</p>
+						<span></span>
+					</div>
+					<div class="nav-catalog__wrap_content filter__content ">
+						<p>
+							<input type="checkbox" id="remember1">
+							<label for="remember1" class="checkbox">Picooc 1</label>
+						</p>
+						<p>
+							<input type="checkbox" id="remember2">
+							<label for="remember2" class="checkbox">Picooc 2</label>
+						</p>
+						<p>
+							<input type="checkbox" id="remember3">
+							<label for="remember3" class="checkbox">Picooc 3</label>
+						</p>
+						<p>
+							<input type="checkbox" id="remember4">
+							<label for="remember4" class="checkbox">Picooc 4</label>
+						</p>
+						<p>
+							<input type="checkbox" id="remember6" disabled>
+							<label for="remember6" class="checkbox">Picooc 5</label>
+						</p>
+					</div>
+				</div>
+
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
+						<p>Цена</p>
+						<span></span>
+					</div>
+					<div class="nav-catalog__wrap_content filter__content">
+						<div id="steps-slider"></div>
+						<div class="nav-catalog__wrap_input">
+							<input type="text" id="input-with-keypress-0">
+							<b></b>
+							<input type="text" id="input-with-keypress-1">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="nav-catalog__wrap_block filter">
+					<div class="nav-catalog__wrap_click filter__header">
+						<p>Выбор параметра</p>
+						<span></span>
+					</div>
+					<div class="nav-catalog__wrap_content filter__content">
+						<p>
+							<input type="radio" id="radio1" name="radio" disabled>
+							<label for="radio1" class="radio">Picooc 1</label>
+						</p>
+						<p>
+							<input type="radio" id="radio2" name="radio">
+							<label for="radio2" class="radio">Picooc 1</label>
+						</p>
+						<p>
+							<input type="radio" id="radio3" name="radio">
+							<label for="radio3" class="radio">Picooc 1</label>
+						</p>
+					</div>
+				</div>
+
+		</div>
+
+		</div>
+	</nav>
+
 	<header class="header">
 		<div class="header__container container">
 
@@ -178,7 +264,25 @@
 								<a href="#" class="block__header"><span><span></span></span>Каталог</a>
 								<div class="header__nav_sub-list block__content">
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
+										<ul class="">
+											<li><a href="#">Home <span class="new">New</span></a></li>
+											<li><a href="#">Shop </a></li>
+											<li><a href="#">Pages <span class="hot">Hot</span></a></li>
+											<li><a href="#">Blog</a></li>
+										</ul>
+									</div>
+									<div class="header__nav_sub-list_elem">
+										<p class="header__nav_title"><a href="#">Категории</a></p>
+										<ul class="">
+											<li><a href="#">Home <span class="sale">Sale</span></a></li>
+											<li><a href="#">Shop</a></li>
+											<li><a href="#">Pages</a></li>
+											<li><a href="#">Blog</a></li>
+										</ul>
+									</div>
+									<div class="header__nav_sub-list_elem">
+										<p class="header__nav_title"><a href="#">Фильтры товаров</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -187,7 +291,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Категории</a></h3>
+										<p class="header__nav_title"><a href="#">Страницы</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -196,25 +300,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Фильтры товаров</a></h3>
-										<ul class="">
-											<li><a href="#">Home</a></li>
-											<li><a href="#">Shop</a></li>
-											<li><a href="#">Pages</a></li>
-											<li><a href="#">Blog</a></li>
-										</ul>
-									</div>
-									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Страницы</a></h3>
-										<ul class="">
-											<li><a href="#">Home</a></li>
-											<li><a href="#">Shop</a></li>
-											<li><a href="#">Pages</a></li>
-											<li><a href="#">Blog</a></li>
-										</ul>
-									</div>
-									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -228,7 +314,7 @@
 								<a href="#" class="block__header">Магазин</a>
 								<div class="header__nav_sub-list block__content">
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -237,7 +323,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Категории</a></h3>
+										<p class="header__nav_title"><a href="#">Категории</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -251,7 +337,7 @@
 								<a href="#" class="block__header">Страницы</a>
 								<div class="header__nav_sub-list block__content">
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -260,7 +346,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Категории</a></h3>
+										<p class="header__nav_title"><a href="#">Категории</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -269,7 +355,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Фильтры товаров</a></h3>
+										<p class="header__nav_title"><a href="#">Фильтры товаров</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -278,7 +364,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Страницы</a></h3>
+										<p class="header__nav_title"><a href="#">Страницы</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -287,7 +373,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -301,7 +387,7 @@
 								<a href="#" class="block__header">Блог</a>
 								<div class="header__nav_sub-list block__content">
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Фильтры товаров</a></h3>
+										<p class="header__nav_title"><a href="#">Фильтры товаров</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -310,7 +396,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Страницы</a></h3>
+										<p class="header__nav_title"><a href="#">Страницы</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -319,7 +405,7 @@
 										</ul>
 									</div>
 									<div class="header__nav_sub-list_elem">
-										<h3><a href="#">Магазин</a></h3>
+										<p class="header__nav_title"><a href="#">Магазин</a></p>
 										<ul class="">
 											<li><a href="#">Home</a></li>
 											<li><a href="#">Shop</a></li>
@@ -409,7 +495,11 @@
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M374.108 373.328c-7.829-7.792-20.492-7.762-28.284.067L276 443.557V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v423.558l-69.824-70.164c-7.792-7.829-20.455-7.859-28.284-.067-7.83 7.793-7.859 20.456-.068 28.285l104 104.504.019.018c7.792 7.809 20.496 7.834 28.314.001l.019-.018 104-104.504c7.79-7.828 7.763-20.492-.068-28.285z"/></svg>
 							ФИЛЬТРЫ
 						</p>
-						<p><a href="#">Очистить</a></p>
+						<p><a href="#" class="market__filter_col-remove">Очистить</a></p>
+						<a href="#" class="nav-catalog--open market__filter_open">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 393 393.99"><path d="M368.313 0H17.05A16.5 16.5 0 0 0 2.344 8.96a16.732 16.732 0 0 0 1.3 17.415l128.688 181.281c.043.063.09.121.133.184a36.769 36.769 0 0 1 7.219 21.816v147.797a16.429 16.429 0 0 0 16.433 16.535c2.227 0 4.426-.445 6.48-1.297l72.313-27.574c6.48-1.976 10.781-8.09 10.781-15.453V229.656a36.774 36.774 0 0 1 7.215-21.816c.043-.063.09-.121.133-.184L381.723 26.367a16.717 16.717 0 0 0 1.3-17.406A16.502 16.502 0 0 0 368.313 0zM236.78 195.992a56.931 56.931 0 0 0-11.097 33.664v117.578l-66 25.164V229.656a56.909 56.909 0 0 0-11.102-33.664L23.648 20h338.07zm0 0"/></svg>
+							ФИЛЬТРЫ
+						</a>
 					</div>
 
 					<div class="market__filter_wrap">
@@ -438,24 +528,24 @@
 								</div>
 								<div class="nav-catalog__wrap_content filter__content ">
 									<p>
-										<input type="checkbox" id="remember1">
-										<label for="remember1" class="checkbox">Picooc 1</label>
+										<input type="checkbox" id="filter__check1">
+										<label for="filter__check1" class="checkbox">Picooc 1</label>
 									</p>
 									<p>
-										<input type="checkbox" id="remember2">
-										<label for="remember2" class="checkbox">Picooc 2</label>
+										<input type="checkbox" id="filter__check2">
+										<label for="filter__check2" class="checkbox">Picooc 2</label>
 									</p>
 									<p>
-										<input type="checkbox" id="remember3">
-										<label for="remember3" class="checkbox">Picooc 3</label>
+										<input type="checkbox" id="filter__check3">
+										<label for="filter__check3" class="checkbox">Picooc 3</label>
 									</p>
 									<p>
-										<input type="checkbox" id="remember4">
-										<label for="remember4" class="checkbox">Picooc 4</label>
+										<input type="checkbox" id="filter__check4">
+										<label for="filter__check4" class="checkbox">Picooc 4</label>
 									</p>
 									<p>
-										<input type="checkbox" id="remember6" disabled>
-										<label for="remember6" class="checkbox">Picooc 5</label>
+										<input type="checkbox" id="filter__check5" disabled>
+										<label for="filter__check5" class="checkbox">Picooc 5</label>
 									</p>
 								</div>
 							</div>
@@ -466,11 +556,11 @@
 									<span></span>
 								</div>
 								<div class="nav-catalog__wrap_content filter__content">
-									<div id="steps-slider"></div>
+									<div id="steps-slider2"></div>
 									<div class="nav-catalog__wrap_input">
-										<input type="text" id="input-with-keypress-0">
+										<input type="text" id="input-with-keypress-3">
 										<b></b>
-										<input type="text" id="input-with-keypress-1">
+										<input type="text" id="input-with-keypress-4">
 									</div>
 								</div>
 			
@@ -483,16 +573,16 @@
 								</div>
 								<div class="nav-catalog__wrap_content filter__content">
 									<p>
-										<input type="radio" id="radio1" name="radio" disabled>
-										<label for="radio1" class="radio">Picooc 1</label>
+										<input type="radio" id="filter__content1" name="filter__content" disabled>
+										<label for="filter__content1" class="radio">Picooc 1</label>
 									</p>
 									<p>
-										<input type="radio" id="radio2" name="radio">
-										<label for="radio2" class="radio">Picooc 1</label>
+										<input type="radio" id="filter__content2" name="filter__content">
+										<label for="filter__content2" class="radio">Picooc 1</label>
 									</p>
 									<p>
-										<input type="radio" id="radio3" name="radio">
-										<label for="radio3" class="radio">Picooc 1</label>
+										<input type="radio" id="filter__content3" name="filter__content">
+										<label for="filter__content3" class="radio">Picooc 1</label>
 									</p>
 								</div>
 							</div>
@@ -1290,7 +1380,7 @@
 			</div>
 
 			<div class="footer__col">
-				<h3>HELP INFORMATION</h3>
+				<p class="footer__title">HELP INFORMATION</p>
 				<ul>
 					<li><a href="#">Harman Corporate</a></li>
 					<li><a href="#">Carrers</a></li>
@@ -1302,7 +1392,7 @@
 			</div>
 
 			<div class="footer__col">
-				<h3>About us</h3>
+				<p class="footer__title">About us</p>
 				<ul>
 					<li><a href="#">Harman Corporate</a></li>
 					<li><a href="#">Carrers</a></li>
@@ -1314,7 +1404,7 @@
 			</div>
 
 			<div class="footer__col">
-				<h3>Categories</h3>
+				<p class="footer__title">Categories</p>
 				<ul>
 					<li><a href="#">Harman Corporate</a></li>
 					<li><a href="#">Carrers</a></li>

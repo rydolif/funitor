@@ -1,5 +1,92 @@
 @import base
 
+//----VARS-------------
+
+section, nav, header, footer, main
+	h1, h2, h3, h4, h5, h6
+		font-weight: 300
+		line-height: 1.2
+		margin: 0
+		padding: 0
+
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+
+	b, strong
+		font-weight: 700
+
+	p
+		margin: 0
+		padding: 0
+
+	a,
+	button
+		+transition
+		color: $text
+		padding: 0
+
+		&:focus,
+		&:hover,
+			outline: none
+			text-decoration: none
+			border: none
+			outline: none
+			color: $accent
+
+	svg
+		+transition
+
+	input, textarea, select
+		+transition
+		outline: none
+		box-shadow: none
+		border: 1px solid #000
+		// -webkit-appearance: none
+		
+		&:focus:required:invalid
+			border-color: red
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+
+		&:required:valid
+			border-color: green
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+
+		&::placeholder
+			color: $text
+
+
+	label.error
+		position: absolute
+		bottom: -25px
+		right: 25px
+		left: 25px
+		transition: all .3s
+		animation: error .3s linear 1 forwards
+		color: #fff
+		text-align: center
+		font-weight: 600
+		background-color: red
+		border-radius: 10px
+		z-index: 1
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: -8px
+			margin-left: -2px
+			border-bottom: 4px solid red
+			border-left: 4px solid transparent
+			border-right: 4px solid transparent
+			border-top: 4px solid transparent
+
+
 // -----CONTAINER-----
 .container
 	width: 100%
@@ -42,6 +129,7 @@
 	border: 0
 	white-space: nowrap
 	cursor: pointer
+	z-index: 1
 
 	+r(1200)
 		min-height: 40px
@@ -69,7 +157,7 @@
 
 		svg
 			fill: #ffffff
-			width: 15px
+			width: 18px
 			margin-right: 10px
 
 	&--white
@@ -328,12 +416,10 @@
 		transition: all .6s
 		background-color: transparent
 		z-index: 1
-		border-right: 1px solid #e8e8e8
 
 		&:hover,
 		&:focus
 			outline: none
-			border-right: 1px solid #e8e8e8
 
 			span
 				background: $accent
@@ -382,7 +468,7 @@
 		&_block
 			padding-bottom: 20px
 			margin-bottom: 20px
-			border-bottom: 2px solid #b7b7b7
+			border-bottom: 1px solid #e8e8e8
 
 			&:last-child
 				border-bottom: 0
@@ -925,39 +1011,6 @@
 				box-shadow: 0 0 5px 0 rgba($text, 0)
 				transition: all 0s
 
-			h3
-				position: relative
-				margin-bottom: 25px
-				padding-bottom: 10px
-
-				+r(1200)
-					margin-bottom: 20px
-					padding-bottom: 15px
-					font-size: 12px
-
-				+r(992)
-					margin-bottom: 15px
-					padding-bottom: 5px
-
-				&::before
-					content: ''
-					position: absolute
-					bottom: 0
-					left: 0
-					width: 30px
-					height: 1px
-					background-color: #ddac55
-
-				a
-					text-transform: uppercase
-					color: $text
-					font-weight: 500
-					letter-spacing: 0.1em
-					font-size: 14px
-
-					&::before
-						display: none
-
 			a
 				display: inline-block
 				font-size: 14px
@@ -984,6 +1037,7 @@
 					margin-bottom: 0
 
 			&_elem
+				position: relative
 				padding: 0 15px
 				min-width: 180px
 				width: fit-content
@@ -996,6 +1050,17 @@
 				&:last-child
 					+r(992)
 						margin-bottom: 0
+
+				a
+					position: relative
+
+				span
+					position: absolute
+					text-align: center
+					font-size: 10px
+					top: -5px
+					left: 100%
+					padding: 0
 
 		&_login
 
@@ -1076,6 +1141,39 @@
 					&::after
 						background-color: #ffffff
 
+		&_title
+			position: relative
+			margin-bottom: 25px
+			padding-bottom: 10px
+
+			+r(1200)
+				margin-bottom: 20px
+				padding-bottom: 15px
+				font-size: 12px
+
+			+r(992)
+				margin-bottom: 15px
+				padding-bottom: 5px
+
+			&::before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 30px
+				height: 1px
+				background-color: #ddac55
+
+			a
+				text-transform: uppercase
+				color: $text
+				font-weight: 500
+				letter-spacing: 0.1em
+				font-size: 14px
+
+				&::before
+					display: none
+
 		&--active
 			opacity: 1
 			visibility: visible
@@ -1084,6 +1182,7 @@
 				margin-left: 0
 
 	&__logo
+		max-width: 140px
 		text-transform: uppercase
 		font-size: 26px
 		letter-spacing: 0.2em
@@ -1092,6 +1191,9 @@
 
 		+r(992)
 			font-size: 22px
+
+		img
+			width: 100%
 
 		span
 			+transition
@@ -1227,10 +1329,26 @@
 
 .hero
 	background-color: #f2f2f2
+	font-size: 20px
 
-	h1
+	+r(992)
+		font-size: 18px
+
+	+r(767)
+		font-size: 16px
+	
+	+r(576)
+		font-size: 14px
+
+	p
+		margin-bottom: 30px
+
+		+r(992)
+			margin-bottom: 15px
+
+	&__title
 		font-size: 66px
-		margin-bottom: 15px
+		margin-bottom: 15px !important
 
 		+r(1200)
 			font-size: 54px
@@ -1247,20 +1365,6 @@
 		+r(480)
 			font-size: 26px
 
-	p
-		font-size: 20px
-		margin-bottom: 30px
-
-		+r(992)
-			margin-bottom: 15px
-			font-size: 18px
-
-		+r(767)
-			font-size: 16px
-		
-		+r(576)
-			font-size: 14px
-
 	br
 		+r(992)
 			display: none
@@ -1275,6 +1379,7 @@
 		&_item
 			+between
 			opacity: 0 !important
+			visibility: hidden
 			align-self: center
 
 		&_desc
@@ -1333,6 +1438,7 @@
 
 	.swiper-slide-active
 		opacity: 1 !important
+		visibility: visible
 
 
 .info
@@ -1351,6 +1457,7 @@
 		position: relative
 		width: 33.333%
 		text-align: center
+		color: #909090
 
 		+r(767)
 			width: 100%
@@ -1360,7 +1467,7 @@
 		&::before
 			content: ''
 			position: absolute
-			left: 100%
+			left: 104%
 			top: 50%
 			transform: translate(0, -50%)
 			height: 90%
@@ -1397,17 +1504,15 @@
 				font-size: 40px
 				margin-bottom: 10px
 
-		h3
+		&_title
 			font-weight: 700
 			text-transform: uppercase
 			margin-bottom: 15px
 			letter-spacing: .1em
+			color: $text
 
 			+r(1200)
 				margin-bottom: 10px
-
-		p
-			color: #909090
 
 
 .market
@@ -1788,20 +1893,27 @@
 				width: 100%
 				justify-content: center
 
+			&-remove
+				+r(992)
+					display: none
+
 			p
 				display: flex
 				margin-right: 15px
 
-			a
-				color: #979797
-				text-decoration: underline
+				+r(992)
+					display: none
 
-				&:hover
-					color: $accent
+			.nav-catalog--open
+				display: none
+
+				+r(992)
+					display: flex
 
 			svg
 				width: 15px
 				height: 15px
+				margin-right: 7px
 
 	&__pagination
 		display: flex
@@ -1852,6 +1964,9 @@
 			grid-gap: 15px
 			font-size: 16px
 
+		+r(992)
+			grid-template-columns: 2fr 5fr
+
 		+r(767)
 			grid-template-columns: 1fr
 			font-size: 14px
@@ -1886,12 +2001,18 @@
 			+r(1200)
 				padding: 15px
 
-		.nav-catalog__wrap_main
-			background-color: $bg
-			
-			+r(1200)
-				padding: 15px
-				font-size: 16px
+		.nav-catalog__wrap
+			&_category
+				a
+					+r(1200)
+						font-size: 16px
+
+			&_main
+				background-color: $bg
+				
+				+r(1200)
+					padding: 15px
+					font-size: 16px
 
 		.nav-catalog__wrap
 			background-color: #fff
@@ -2197,6 +2318,21 @@
 
 .tovar
 
+	&__name
+		font-size: 40px
+		margin-bottom: 25px
+		font-weight: 400
+
+		+r(1440)
+			font-size: 36px
+			margin-bottom: 15px
+		
+		+r(1200)
+			font-size: 30px
+		
+		+r(992)
+			font-size: 24px
+
 	&__nav
 		display: flex
 		flex-wrap: wrap
@@ -2258,31 +2394,20 @@
 		flex-wrap: wrap
 		justify-content: space-between
 
-		h1
-			font-size: 40px
-			margin-bottom: 25px
-			font-weight: 400
-
-			+r(1440)
-				font-size: 36px
-				margin-bottom: 15px
-			
-			+r(1200)
-				font-size: 30px
-			
-			+r(992)
-				font-size: 24px
-
 		p, ul
 			color: #979797
 			margin-bottom: 5px
 			letter-spacing: .05em
 		
 		hr
-			margin-bottom: 20px
+			border: none
+			color: #e8e8e8
+			background-color: #e8e8e8
+			height: 1px
+			margin: 20px 0
 
 			+r(1200)
-				margin-bottom: 10px
+				margin: 10px 0
 
 		li
 			margin-bottom: 5px
@@ -2311,10 +2436,10 @@
 
 		&_radio
 			display: flex
-			margin-bottom: 45px
+			margin-bottom: 20px
 
 			+r(1200)
-				margin-bottom: 30px
+				margin-bottom: 10px
 
 			+r(992)
 				margin-bottom: 20px
@@ -2348,7 +2473,7 @@
 			display: flex
 			align-items: center
 			flex-wrap: wrap
-			margin-bottom: 35px
+			margin-bottom: 20px
 
 			&_price, &_cart, &_add, &_like
 				margin-right: 35px
@@ -2385,7 +2510,7 @@
 				cursor: pointer
 				margin-right: 25px
 				margin-bottom: 0
-				font-weight: 500
+				font-weight: 700
 				color: $text
 				border-bottom: 3px solid transparent
 				+transition
@@ -2409,6 +2534,7 @@
 
 	&__slider
 		display: flex
+		flex-wrap: wrap
 		width: 40%
 
 		+r(1440)
@@ -2436,10 +2562,9 @@
 				max-height: 480px
 
 			+r(576)
-				max-height: 385px
-			
-			+r(480)
-				max-height: 300px
+				max-height: auto
+				width: 100%
+				margin-bottom: 10px
 
 			.swiper-slide
 				cursor: pointer
@@ -2452,6 +2577,10 @@
 					width: 50px
 					height: 50px !important
 
+				+r(576)
+					width: 100%
+					height: auto !important
+
 				img
 					width: 100%
 
@@ -2463,6 +2592,9 @@
 
 			+r(992)
 				width: calc(100% - 65px)
+
+			+r(480)
+				width: 100%
 
 			img
 				width: 100%
@@ -2524,7 +2656,7 @@
 		+r(1200)
 			display: none
 
-	h3
+	&__title
 		display: inline-block
 		text-transform: uppercase
 		position: relative
