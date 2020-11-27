@@ -1,91 +1,64 @@
 @import base
 
 //----VARS-------------
+h1, h2, h3, h4, h5, h6
+	font-weight: 300
+	line-height: 1.2
+	margin: 0
+	padding: 0
 
-section, nav, header, footer, main
-	h1, h2, h3, h4, h5, h6
-		font-weight: 300
-		line-height: 1.2
-		margin: 0
-		padding: 0
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
 
-	ul
-		margin: 0
-		padding: 0
-		list-style-type: none
+b, strong
+	font-weight: 700
 
-	b, strong
-		font-weight: 700
+p
+	margin: 0
+	padding: 0
 
-	p
-		margin: 0
-		padding: 0
+a,
+button
+	+transition
+	color: $text
+	padding: 0
 
-	a,
-	button
-		+transition
-		color: $text
-		padding: 0
+	&:focus,
+	&:hover,
+		outline: none
+		text-decoration: none
+		border: none
+		outline: none
 
-		&:focus,
-		&:hover,
-			outline: none
-			text-decoration: none
-			border: none
-			outline: none
-			color: $accent
+	&:hover
+		color: $accent
 
-	svg
-		+transition
+svg
+	+transition
 
-	input, textarea, select
-		+transition
+input, textarea, select
+	+transition
+	outline: none
+	box-shadow: none
+	border: 1px solid #000
+	// -webkit-appearance: none
+	
+	&:focus:required:invalid
+		border-color: red
 		outline: none
 		box-shadow: none
-		border: 1px solid #000
-		// -webkit-appearance: none
-		
-		&:focus:required:invalid
-			border-color: red
-			outline: none
-			box-shadow: none
-			-webkit-appearance: none
+		-webkit-appearance: none
 
-		&:required:valid
-			border-color: green
-			outline: none
-			box-shadow: none
-			-webkit-appearance: none
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
 
-		&::placeholder
-			color: $text
-
-
-	label.error
-		position: absolute
-		bottom: -25px
-		right: 25px
-		left: 25px
-		transition: all .3s
-		animation: error .3s linear 1 forwards
-		color: #fff
-		text-align: center
-		font-weight: 600
-		background-color: red
-		border-radius: 10px
-		z-index: 1
-
-		&::before
-			content: ''
-			position: absolute
-			left: 50%
-			top: -8px
-			margin-left: -2px
-			border-bottom: 4px solid red
-			border-left: 4px solid transparent
-			border-right: 4px solid transparent
-			border-top: 4px solid transparent
-
+	&::placeholder
+		color: $text
 
 // -----CONTAINER-----
 .container
@@ -130,6 +103,7 @@ section, nav, header, footer, main
 	white-space: nowrap
 	cursor: pointer
 	z-index: 1
+	+transition
 
 	+r(1200)
 		min-height: 40px
@@ -524,7 +498,7 @@ section, nav, header, footer, main
 				margin: 0 7px
 				background-color: #babac0
 
-		.filter--open
+		.filter--open .filter__header
 			span
 				transform: translate(0, -50%) rotate(45deg)
 				border-color: $accent
@@ -532,15 +506,27 @@ section, nav, header, footer, main
 		&_category
 
 			a
+				display: inline-flex
+				align-items: center
 				font-size: 18px
+
+				&:hover
+					svg
+						fill: $accent
+				
+				&:active
+					svg
+						transform: translate(5px, 0)
 
 			span
 				font-size: 12px !important
 				color: #979797 !important
 				padding-left: 5px
 
-			img
-				margin-right: 15px
+			svg
+				width: 15px
+				height: 15px
+				margin-right: 10px
 
 	&.active
 		left: 0
@@ -632,6 +618,7 @@ section, nav, header, footer, main
 			letter-spacing: .2em
 			font-weight: 700
 			flex-shrink: 0
+			margin-bottom: 0 !important
 		
 		&_number
 			display: flex
@@ -642,6 +629,7 @@ section, nav, header, footer, main
 			height: 50px
 			font-weight: 700
 			border-left: 1px solid #e8e8e8
+			margin-bottom: 0 !important
 
 	&__main
 		min-height: calc(100% - 150px)
@@ -731,6 +719,9 @@ section, nav, header, footer, main
 		font-size: 16px
 		font-weight: 500
 
+		p
+			margin-bottom: 0
+
 		b
 			color: $accent
 
@@ -780,6 +771,7 @@ section, nav, header, footer, main
 	display: block
 	padding: 3px 10px
 	z-index: 10
+	font-size: 14px
 
 	+r(576)
 		top: 5px
@@ -1218,6 +1210,7 @@ section, nav, header, footer, main
 			grid-template-columns: 1fr
 
 		&_tel
+			position: relative
 			grid-column-start: 2
 
 			+r(1200)
@@ -1229,14 +1222,36 @@ section, nav, header, footer, main
 			+r(992)
 				display: none
 
+			&:hover
+				.btn
+					visibility: visible
+					opacity: 1
+					transform: translate(0, 0)
+
+
 			a
-				display: block
+				position: relative
+				display: inline-flex
+				align-items: center
 				font-weight: 700
 				font-size: 18px
 				line-height: 1
+			
+				&::after
+					content: '▼'
+					font-size: 12px
+					margin-left: 5px
 
 			p
 				font-size: 11px
+			
+			.btn
+				position: absolute
+				top: 100%
+				left: 0
+				transform: translate(20px, 20px)
+				visibility: hidden
+				opacity: 0
 
 		&_nav
 			display: flex
@@ -1640,7 +1655,7 @@ section, nav, header, footer, main
 
 		&_hover
 			position: relative
-			margin-bottom: 15px
+			margin-bottom: 10px
 
 		&_button
 			position: absolute
@@ -1730,7 +1745,6 @@ section, nav, header, footer, main
 					padding: 2px 5px
 					font-size: 12px
 
-
 		&_brend
 			color: #979797
 			margin-bottom: 10px
@@ -1741,7 +1755,7 @@ section, nav, header, footer, main
 				margin-bottom: 5px
 		
 		&_title
-			margin-bottom: 15px
+			margin-bottom: 10px
 
 			+r(992)
 				margin-bottom: 5px
@@ -2494,15 +2508,16 @@ section, nav, header, footer, main
 					margin-bottom: 10px
 
 			&_price
-				font-size: 26px
+				font-size: 22px
+				line-height: 1.2
 
 				.market__wrap_price--minus
 					color: $accent
 					padding: 2px
-					font-size: 12px
+					font-size: 10px
 
 				del
-					font-size: 14px
+					font-size: 12px
 				
 				p
 					margin-bottom: 0
