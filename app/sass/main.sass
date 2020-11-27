@@ -1057,6 +1057,7 @@ input, textarea, select
 					padding: 0
 
 		&_login
+			min-height: auto
 
 			input
 				width: 100%
@@ -1228,10 +1229,9 @@ input, textarea, select
 					opacity: 1
 					transform: translate(0, 0)
 
-
 			a
 				position: relative
-				display: inline-flex
+				// display: inline-flex
 				align-items: center
 				font-weight: 700
 				font-size: 18px
@@ -1239,8 +1239,10 @@ input, textarea, select
 			
 				&::after
 					content: '▼'
+					display: inline-block
 					font-size: 12px
 					margin-left: 5px
+					margin-top: -1px
 
 			p
 				font-size: 11px
@@ -1588,7 +1590,7 @@ input, textarea, select
 	&__wrap
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-gap: 15px
+		grid-gap: 25px 15px
 
 		+r(992)
 			grid-template-columns: 1fr 1fr
@@ -1924,6 +1926,7 @@ input, textarea, select
 			p
 				display: flex
 				margin-right: 15px
+				line-height: 1
 
 				+r(992)
 					display: none
@@ -2416,6 +2419,7 @@ input, textarea, select
 
 	&__desc
 		display: flex
+		align-items: flex-start
 		flex-wrap: wrap
 		justify-content: space-between
 
@@ -2559,6 +2563,8 @@ input, textarea, select
 				color: $text
 
 	&__slider
+		position: sticky
+		top: 60px
 		display: flex
 		flex-wrap: wrap
 		width: 40%
@@ -2567,6 +2573,8 @@ input, textarea, select
 			width: 47%
 
 		+r(767)
+			position: relative
+			top: 0
 			width: 100%
 			margin-bottom: 25px
 
