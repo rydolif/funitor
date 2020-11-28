@@ -1,64 +1,147 @@
 @import base
 
-//----VARS-------------
 h1, h2, h3, h4, h5, h6
 	font-weight: 300
 	line-height: 1.2
 	margin: 0
 	padding: 0
 
-ul
-	margin: 0
-	padding: 0
-	list-style-type: none
+//----VARS-------------
+.wrapper
 
-b, strong
-	font-weight: 700
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
 
-p
-	margin: 0
-	padding: 0
+	b, strong
+		font-weight: 700
 
-a,
-button
-	+transition
-	color: $text
-	padding: 0
+	p
+		margin: 0
+		padding: 0
 
-	&:focus,
-	&:hover,
-		outline: none
-		text-decoration: none
-		border: none
-		outline: none
-
-	&:hover
-		color: $accent
-
-svg
-	+transition
-
-input, textarea, select
-	+transition
-	outline: none
-	box-shadow: none
-	border: 1px solid #000
-	// -webkit-appearance: none
-	
-	&:focus:required:invalid
-		border-color: red
-		outline: none
-		box-shadow: none
-		-webkit-appearance: none
-
-	&:required:valid
-		border-color: green
-		outline: none
-		box-shadow: none
-		-webkit-appearance: none
-
-	&::placeholder
+	a,
+	button
+		+transition
 		color: $text
+
+		&:focus,
+		&:hover,
+			outline: none
+			text-decoration: none
+			border: none
+			outline: none
+
+		&:hover
+			color: $accent
+
+	svg
+		+transition
+
+	input, textarea, select
+		+transition
+		outline: none
+		box-shadow: none
+		border: 1px solid #000
+		// -webkit-appearance: none
+		
+		&:focus:required:invalid
+			border-color: red
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+
+		&:required:valid
+			border-color: green
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+
+		&::placeholder
+			color: $text
+	
+	// -----BUTTON-----
+	.btn
+		position: relative
+		top: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 50px
+		border-radius: 3px
+		max-width: fit-content
+		background-color: $text
+		font-size: 14px
+		text-transform: uppercase
+		color: #fff
+		font-weight: 400
+		letter-spacing: .2em
+		padding: 0 40px
+		border: 0
+		white-space: nowrap
+		cursor: pointer
+		z-index: 1
+		+transition
+
+		+r(1200)
+			min-height: 40px
+
+		&:hover
+			background: $accent
+			color: #fff
+
+		&--accent, &--white
+			border-radius: 25px
+			letter-spacing: .5px
+			padding: 0 25px
+			min-height: 45px
+			font-weight: 500
+
+			&:hover
+				transform: translate(0, 0) scale(.95) !important
+
+		&--accent
+			color: #ffffff
+			background-color: $accent
+
+			svg
+				fill: #ffffff
+				width: 18px
+				margin-right: 10px
+
+		&--white
+			background-color: #fff
+			color: $text
+			border: 1px solid #acacac
+
+			&:hover,
+			&:active
+				background-color: $accent
+				border: 1px solid $accent
+
+		&--like
+			min-width: 45px
+			min-height: 45px
+			max-width: 100%
+			border-radius: 50%
+			padding: 0
+			background-color: #fff
+			color: $text
+			border: 1px solid #acacac
+
+			&:hover,
+			&:active
+				background-color: $accent
+				border: 1px solid $accent
+
+				svg
+					fill: #fff
+
+			svg
+				fill: #acacac
+				width: 18px
+
 
 // -----CONTAINER-----
 .container
@@ -83,88 +166,6 @@ input, textarea, select
 		max-width: 480px
 
 // -----BUTTON-----
-.btn
-	position: relative
-	top: 0
-	display: flex
-	justify-content: center
-	align-items: center
-	min-height: 50px
-	border-radius: 3px
-	max-width: fit-content
-	background-color: $text
-	font-size: 14px
-	text-transform: uppercase
-	color: #fff
-	font-weight: 400
-	letter-spacing: .2em
-	padding: 0 40px
-	border: 0
-	white-space: nowrap
-	cursor: pointer
-	z-index: 1
-	+transition
-
-	+r(1200)
-		min-height: 40px
-
-	&:hover
-		background: $accent
-		color: #fff
-
-	&:active
-		top: 3px
-
-	&--accent, &--white
-		border-radius: 25px
-		letter-spacing: .5px
-		padding: 0 25px
-		min-height: 45px
-		font-weight: 500
-
-	&--accent
-		color: #ffffff
-		background-color: $accent
-
-		&:hover
-			box-shadow: 0 0 10px 0 rgba($accent, 1)
-
-		svg
-			fill: #ffffff
-			width: 18px
-			margin-right: 10px
-
-	&--white
-		background-color: #fff
-		color: $text
-		border: 1px solid #acacac
-
-		&:hover,
-		&:active
-			background-color: $accent
-			border: 1px solid $accent
-
-	&--like
-		min-width: 45px
-		min-height: 45px
-		max-width: 100%
-		border-radius: 50%
-		padding: 0
-		background-color: #fff
-		color: $text
-		border: 1px solid #acacac
-
-		&:hover,
-		&:active
-			background-color: $accent
-			border: 1px solid $accent
-
-			svg
-				fill: #fff
-
-		svg
-			fill: #acacac
-			width: 18px
 
 // -----HAMBURGER-----
 .hamburger
@@ -347,7 +348,7 @@ input, textarea, select
 			position: absolute
 			left: 50%
 			top: 50%
-			background: #273a72
+			background: $text
 			transition: all .6s
 			border-radius: 4px
 			height: 22px
@@ -403,7 +404,7 @@ input, textarea, select
 			position: absolute
 			left: 50%
 			top: 50%
-			background: #273a72
+			background: $text
 			transition: all .6s
 			border-radius: 4px
 			height: 22px
@@ -594,7 +595,7 @@ input, textarea, select
 			position: absolute
 			left: 50%
 			top: 50%
-			background: #273a72
+			background: $text
 			transition: all .6s
 			border-radius: 4px
 			height: 22px
@@ -1157,7 +1158,7 @@ input, textarea, select
 				left: 0
 				width: 30px
 				height: 1px
-				background-color: #ddac55
+				background-color: $accent
 
 			a
 				text-transform: uppercase
@@ -2104,7 +2105,7 @@ input, textarea, select
 	&__top
 		background-color: $bg
 
-		h1
+		&_title
 			font-size: 40px
 			text-align: center
 			margin-bottom: 10px
@@ -2552,7 +2553,7 @@ input, textarea, select
 					margin-right: 0
 
 			.active
-				border-bottom: 3px solid $accent
+				border-bottom: 2px solid $accent
 
 		&_item
 		
@@ -2635,7 +2636,7 @@ input, textarea, select
 
 	&__more
 
-		h2
+		&_title
 			display: inline-block
 			padding-bottom: 4px
 			position: relative
