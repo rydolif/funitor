@@ -115,6 +115,43 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 		});
 
+	//----------------------SLIDER-gallery----------------------
+		var galleryThumbs = new Swiper('.gallery-thumbs2', {
+			spaceBetween: 5,
+			slidesPerView: 5,
+			freeMode: true,
+			loopedSlides: 5,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			direction: 'horizontal',
+			breakpoints: {
+				1600: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+					direction: 'vertical',
+				},
+				1240: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+					direction: 'vertical',
+				}, 
+				576: {
+					direction: 'vertical',
+				}
+			},
+		});
+		var galleryTop = new Swiper('.gallery-top2', {
+			spaceBetween: 40,
+			loopedSlides: 5,
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+			pagination: {
+				el: '.gallery-top2__pagination',
+				clickable: 'true',
+			},
+		});
+
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
 			let list = document.querySelector(scrollTo);
