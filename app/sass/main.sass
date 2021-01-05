@@ -158,6 +158,22 @@ input, textarea, select
 	+r(576)
 		max-width: 480px
 
+	&--min
+		max-width: 1110px
+
+		+r(1200)
+			max-width: 992px
+
+		+r(992)
+			max-width: 768px
+
+		+r(767)
+			max-width: 576px
+
+		+r(576)
+			max-width: 480px
+
+
 // -----BUTTON-----
 
 // -----HAMBURGER-----
@@ -3321,6 +3337,67 @@ input, textarea, select
 
 		+r(767)
 			display: flex
+
+
+
+.my-contacts
+	&__header
+		ul
+			margin-bottom: 40px
+
+			+r(1200)
+				margin-bottom: 20px
+
+	&__content
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 70px
+
+		+r(767)
+			margin-bottom: 30px
+
+		&_col
+			width: 49%
+
+			+r(767)
+				width: 100%
+				margin-bottom: 25px
+
+			&:last-child
+				margin-bottom: 0
+
+		iframe
+			width: 100%
+			height: 100%
+			min-height: 200px
+
+		p
+			margin-bottom: 30px
+			line-height: 1.5
+
+			+r(767)
+				margin-bottom: 15px
+				line-height: 1.2
+
+			span, b, a
+				display: block
+
+		&_btn
+			display: flex
+			flex-wrap: wrap
+
+			+r(767)
+				// justify-content: space-around
+
+			.btn
+				margin-right: 15px
+				margin-bottom: 5px
+
+				&:last-child
+					margin-right: 0
 
 
 
